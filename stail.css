@@ -25,15 +25,43 @@ table {
   }
   #s{
     opacity: 0;
-    animation-name: espera;
-    animation-duration: 10s;
-    animation-timing-function: ease-in-out;
-    animation-fill-mode: forwards;
+    animation-name: espera, pequeño;
+    animation-duration: 10s, 15s;
+    animation-timing-function: ease-in-out, ease-in-out;
+    animation-fill-mode: forwards, forwards;
   }
 
   @keyframes espera {
     99%{
         opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+@keyframes pequeño {
+    60%{
+        width: 746px;
+    }
+    100%{
+        width: 300px;
+    }
+}
+
+#n,#a,#k,#e{
+    opacity: 0;
+    animation-name: aparecen;
+    animation-duration: 25s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+}
+@keyframes aparecen {
+    60%{
+        opacity: 0;
+    }
+    80%{
+        opacity: 1;
     }
     100%{
         opacity: 1;
