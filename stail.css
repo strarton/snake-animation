@@ -14,7 +14,7 @@ table {
     }
     100%{
         opacity: 0;                         /*AQUI AQUI TIENES QUE MIRAR CABRON*/
-        display: none;
+        visibility: hidden;
     }
 }
 
@@ -24,6 +24,9 @@ table {
     height: 61px;
   }
   #s{
+    position: absolute;
+    top: 0; 
+    left: 0;
     opacity: 0;
     animation-name: espera, pequeño;
     animation-duration: 10s, 15s;
@@ -50,21 +53,32 @@ table {
 }
 
 #n,#a,#k,#e{
+    width: 300px;
+    image-rendering: pixelated;
+    position: absolute;
     opacity: 0;
     animation-name: aparecen;
     animation-duration: 25s;
     animation-timing-function: ease-in-out;
     animation-fill-mode: forwards;
 }
+#n{top: 0; 
+    left: 300px;}
+    #a{top: 0; 
+        left: 600px;}
+        #k{top: 0; 
+            left: 900px;}
+            #e{top: 0; 
+                left: 1200px;}
 @keyframes aparecen {
     60%{
         opacity: 0;
     }
     80%{
-        opacity: 1;
+        opacity: 0.5;
     }
     100%{
-        opacity: 1;
+        opacity: 0.5;
     }
 }
 
